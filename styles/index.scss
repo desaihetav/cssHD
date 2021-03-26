@@ -17,6 +17,7 @@
   --color-status-info: #{$color-status-info};
   --color-primary-light: #{$color-primary-light};
   --color-primary-base: #{$color-primary-base};
+  --color-primary-base-10: #{$color-primary-base-10};
   --color-primary-dark: #{$color-primary-dark};
 }
 
@@ -41,6 +42,10 @@ textarea {
   font-size: inherit;
   line-height: 1.15;
   margin: 0;
+}
+
+button:focus {
+  outline: none;
 }
 
 a {
@@ -71,8 +76,17 @@ textarea {
 .row {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
   align-items: center;
+  overflow: scroll;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .column {
@@ -160,6 +174,7 @@ textarea {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+  background-color: rgba(#0f1c27, 0.1);
   &-icon {
     margin-right: 1rem;
     margin-left: -1rem;
@@ -188,25 +203,22 @@ textarea {
   padding: 0.25rem 0.5rem;
   margin-right: 1rem;
   border-radius: 0.5rem;
+  background-color: rgba(#0f1c27, 0.1);
+  text-transform: uppercase;
   &-default {
     background-color: rgba(#6366f1, 0.2);
-    // color: #6366f1;
   }
   &-success {
     background-color: rgba(#22c55e, 0.2);
-    // color: #22c55e;
   }
   &-warning {
     background-color: rgba(#fde047, 0.2);
-    // color: #fde047;
   }
   &-error {
     background-color: rgba(#ef4444, 0.2);
-    // color: #ef4444;
   }
   &-info {
     background-color: rgba(#38bdf8, 0.2);
-    // color: #38bdf8;
   }
   color: var(--color-texticon-secondary);
 }
@@ -283,29 +295,27 @@ textarea {
   position: relative;
   display: inline-block;
   height: fit-content;
-
+  overflow: visible;
   .icon {
     font-size: 2rem;
+    margin-top: 3px;
   }
 }
 
 .icon-badge {
   position: absolute;
   border-radius: 100%;
-  border: 1.5px solid var(--color-background-1);
+  border: 2px solid var(--color-background-3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background-color: var(--color-primary-base);
-
-  &-lg {
-    width: 1rem;
-    height: 1rem;
-    top: -5px;
-    right: -5px;
-    font-size: 0.675rem;
-  }
+  background-color: var(--color-background-2);
+  width: 1rem;
+  height: 1rem;
+  top: 0px;
+  right: -2px;
+  font-size: 0.675rem;
 }
 
 .btn {
@@ -334,9 +344,11 @@ textarea {
 
   &-solid {
     background-color: var(--color-primary-base);
+    border: 2px solid var(--color-primary-base);
     color: white;
     &:hover {
       background-color: rgba(#1a3043, 0.8);
+      border-color: rgba(#1a3043, 0.8);
       transition: background-color 0.25s ease-in;
     }
   }
@@ -361,13 +373,14 @@ textarea {
 
   &-ghost {
     &:hover {
-      background-color: rgba(#1a3043, 0.2);
+      background-color: var(--color-primary-base-10);
       transition: background-color 0.25s ease-in;
     }
   }
   &-link {
     &:hover {
-      text-decoration: underline;
+      opacity: 0.6;
+      transition: opacity 0.25s ease-in-out;
     }
   }
 
@@ -385,11 +398,11 @@ textarea {
   }
 }
 
-.product-card-container {
+.card-container {
   position: relative;
 }
 
-.out-of-stock {
+.card-text-overlay {
   display: flex;
   place-items: center;
   position: absolute;
@@ -406,7 +419,11 @@ textarea {
   }
 }
 
-.product-card {
+.modal {
+  max-width: 30rem;
+}
+
+.card {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -418,14 +435,15 @@ textarea {
     max-height: 14rem;
   }
 
-  &-video {
+  &-alt {
     flex-direction: row;
     max-height: 100%;
     margin: 3rem 0;
 
     > img {
-      width: 50%;
+      width: 25%;
       object-fit: cover;
+      max-height: fit-content;
     }
 
     > div {
@@ -487,7 +505,7 @@ textarea {
     margin-left: auto;
   }
 
-  &-author {
+  &-subtitle {
     @extend %secondary-text-color;
     margin: 0.25rem 0;
   }
@@ -552,11 +570,20 @@ textarea {
   margin: 4rem 0;
   column-gap: 6rem;
   row-gap: 8rem;
+  place-items: center;
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
   @media screen and (max-width: 640px) {
     row-gap: 4rem;
+  }
+}
+
+.grid-demo {
+  grid-template-columns: 1fr;
+  width: 50%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 }
 
