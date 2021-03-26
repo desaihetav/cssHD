@@ -1971,6 +1971,12 @@ textarea {
   width: 50%;
 }
 
+@media screen and (max-width: 640px) {
+  .input-field {
+    width: 100%;
+  }
+}
+
 .input-error {
   border: 2px solid red;
 }

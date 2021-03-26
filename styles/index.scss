@@ -604,6 +604,9 @@ textarea {
     padding: 1.125rem 1.875rem;
     margin-top: 0.5rem;
     width: 50%;
+    @media screen and (max-width: 640px) {
+      width: 100%;
+    }
   }
 
   &-error {
