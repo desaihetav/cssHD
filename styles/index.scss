@@ -1,5 +1,6 @@
-@import "colors";
-@import "typography";
+@import "_colors";
+@import "_typography";
+@import "_helper";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
@@ -19,20 +20,27 @@
   --color-primary-dark: #{$color-primary-dark};
 }
 
+html {
+  line-height: 1.15;
+}
+
 body {
   background-color: var(--color-background-1);
   color: var(--color-primary-base);
   max-width: 1280px;
-  padding: 1rem;
-  margin: auto;
+  margin: 0 auto;
 }
 
 // funnily Form Elements do not inherit font properties!!
+button,
 input,
-textarea,
-button {
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
+  line-height: 1.15;
+  margin: 0;
 }
 
 ul,
@@ -307,11 +315,25 @@ textarea {
     min-width: 20rem;
   }
 
+  &-small {
+    padding: 16px 24px;
+    min-width: 6rem;
+  }
+
   &-solid {
     background-color: var(--color-primary-base);
     color: white;
     &:hover {
-      background-color: var(--color-primary-dark);
+      background-color: rgba(#1a3043, 0.8);
+      transition: background-color 0.25s ease-in;
+    }
+  }
+
+  &-solid-light {
+    color: var(--color-primary-base);
+    background-color: white;
+    &:hover {
+      background-color: rgba(#fff, 0.9);
       transition: background-color 0.25s ease-in;
     }
   }
@@ -325,7 +347,7 @@ textarea {
   }
   &-ghost {
     &:hover {
-      background-color: rgba(#2685ef, 0.1);
+      background-color: rgba(#1a3043, 0.2);
       transition: background-color 0.25s ease-in;
     }
   }
