@@ -18,6 +18,7 @@
   --color-primary-light: #{$color-primary-light};
   --color-primary-base: #{$color-primary-base};
   --color-primary-base-10: #{$color-primary-base-10};
+  --color-primary-base-5: #{$color-primary-base-5};
   --color-primary-dark: #{$color-primary-dark};
 }
 
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-  background-color: var(--color-background-1);
+  background-color: var(--color-background-3);
   color: var(--color-primary-base);
   max-width: 1280px;
   margin: 0 auto;
@@ -44,9 +45,9 @@ textarea {
   margin: 0;
 }
 
-button:focus {
-  outline: none;
-}
+// button:focus {
+//   outline: none;
+// }
 
 a {
   color: inherit;

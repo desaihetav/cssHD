@@ -1247,6 +1247,7 @@ body {
   --color-primary-light: #38bdf8;
   --color-primary-base: #0f1c27;
   --color-primary-base-10: rgba(15, 28, 39, 0.1);
+  --color-primary-base-5: rgba(15, 28, 39, 0.05);
   --color-primary-dark: #0284c7;
 }
 
@@ -1255,7 +1256,7 @@ html {
 }
 
 body {
-  background-color: var(--color-background-1);
+  background-color: var(--color-background-3);
   color: var(--color-primary-base);
   max-width: 1280px;
   margin: 0 auto;
@@ -1270,10 +1271,6 @@ textarea {
   font-size: inherit;
   line-height: 1.15;
   margin: 0;
-}
-
-button:focus {
-  outline: none;
 }
 
 a {
