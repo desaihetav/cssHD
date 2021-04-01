@@ -1236,7 +1236,7 @@ body {
 
 :root {
   --color-background-1: #f6f7f8;
-  --color-background-2: #dfeaf3;
+  --color-background-2: #fafafc;
   --color-background-3: #ffffff;
   --color-texticon-primary: rgba(0, 0, 0, 0.9);
   --color-texticon-secondary: rgba(0, 0, 0, 0.65);
@@ -1258,7 +1258,6 @@ html {
 body {
   background-color: var(--color-background-3);
   color: var(--color-primary-base);
-  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -1289,6 +1288,12 @@ textarea {
   min-height: 12rem;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .card-subtitle, .card-reviews, .card-description {
   color: var(--color-primary-base);
   opacity: 0.7;
@@ -1309,7 +1314,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .flex-center {
@@ -1586,14 +1591,14 @@ textarea {
 }
 
 .icon-badge-stack .icon {
-  font-size: 2rem;
+  font-size: 2.25rem;
   margin-top: 3px;
 }
 
 .icon-badge {
   position: absolute;
   border-radius: 100%;
-  border: 2px solid var(--color-background-3);
+  border: 2px solid var(--color-background-2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1605,11 +1610,16 @@ textarea {
           justify-content: center;
   font-weight: bold;
   background-color: var(--color-background-2);
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   top: 0px;
   right: -2px;
   font-size: 0.675rem;
+}
+
+.icon-badge-dark {
+  border: 2px solid var(--color-primary-base);
+  color: var(--color-primary-base);
 }
 
 .btn {
@@ -1637,7 +1647,7 @@ textarea {
 }
 
 .btn-small {
-  padding: 16px 24px;
+  padding: 0.75rem 1rem;
   min-width: 6rem;
 }
 
@@ -1746,8 +1756,9 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--color-background-3);
-  max-height: 16rem;
+  width: 100%;
+  max-height: 20rem;
+  height: auto;
 }
 
 @media screen and (max-width: 640px) {
@@ -1825,6 +1836,7 @@ textarea {
 }
 
 .card-content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1838,13 +1850,15 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  background-color: var(--color-background-3);
+  padding: 1rem;
   height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 640px) {
   .card-content {
-    padding: 2.25rem 1rem 1rem 1rem;
+    padding: 1rem;
   }
 }
 
