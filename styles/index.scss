@@ -356,41 +356,51 @@ textarea {
     background-color: var(--color-primary-base);
     border: 2px solid var(--color-primary-base);
     color: white;
-    &:hover {
-      background-color: rgba(#1a3043, 0.8);
-      border-color: rgba(#1a3043, 0.8);
-      transition: background-color 0.25s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba(#1a3043, 0.8);
+        border-color: rgba(#1a3043, 0.8);
+        transition: background-color 0.25s ease-in;
+      }
     }
   }
 
   &-solid-light {
     color: var(--color-primary-base);
     background-color: white;
-    &:hover {
-      background-color: rgba(#fff, 0.9);
-      transition: background-color 0.25s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba(#fff, 0.9);
+        transition: background-color 0.25s ease-in;
+      }
     }
   }
 
   &-outlined {
     border: 2px solid var(--color-primary-base);
-    &:hover {
-      background-color: var(--color-primary-base);
-      color: white;
-      transition: 0.2s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-primary-base);
+        color: white;
+        transition: 0.2s ease-in;
+      }
     }
   }
 
   &-ghost {
-    &:hover {
-      background-color: var(--color-primary-base-10);
-      transition: background-color 0.25s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-primary-base-10);
+        transition: background-color 0.25s ease-in;
+      }
     }
   }
   &-link {
-    &:hover {
-      opacity: 0.6;
-      transition: opacity 0.25s ease-in-out;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+        transition: opacity 0.25s ease-in-out;
+      }
     }
   }
 

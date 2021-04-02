@@ -1657,11 +1657,13 @@ textarea {
   color: white;
 }
 
-.btn-solid:hover {
-  background-color: rgba(26, 48, 67, 0.8);
-  border-color: rgba(26, 48, 67, 0.8);
-  -webkit-transition: background-color 0.25s ease-in;
-  transition: background-color 0.25s ease-in;
+@media (hover: hover) {
+  .btn-solid:hover {
+    background-color: rgba(26, 48, 67, 0.8);
+    border-color: rgba(26, 48, 67, 0.8);
+    -webkit-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+  }
 }
 
 .btn-solid-light {
@@ -1669,33 +1671,41 @@ textarea {
   background-color: white;
 }
 
-.btn-solid-light:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  -webkit-transition: background-color 0.25s ease-in;
-  transition: background-color 0.25s ease-in;
+@media (hover: hover) {
+  .btn-solid-light:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+  }
 }
 
 .btn-outlined {
   border: 2px solid var(--color-primary-base);
 }
 
-.btn-outlined:hover {
-  background-color: var(--color-primary-base);
-  color: white;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+@media (hover: hover) {
+  .btn-outlined:hover {
+    background-color: var(--color-primary-base);
+    color: white;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+  }
 }
 
-.btn-ghost:hover {
-  background-color: var(--color-primary-base-10);
-  -webkit-transition: background-color 0.25s ease-in;
-  transition: background-color 0.25s ease-in;
+@media (hover: hover) {
+  .btn-ghost:hover {
+    background-color: var(--color-primary-base-10);
+    -webkit-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+  }
 }
 
-.btn-link:hover {
-  opacity: 0.6;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+@media (hover: hover) {
+  .btn-link:hover {
+    opacity: 0.6;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+  }
 }
 
 .btn-icon-left {
