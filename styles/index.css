@@ -1235,20 +1235,49 @@ body {
 }
 
 :root {
-  --color-background-1: #f6f7f8;
-  --color-background-2: #fafafc;
-  --color-background-3: #ffffff;
-  --color-texticon-primary: rgba(0, 0, 0, 0.9);
-  --color-texticon-secondary: rgba(0, 0, 0, 0.65);
+  --color-background-1: #f4f5f8ff;
+  --color-background-2: #ffffffff;
+  --color-background-3: #ffffffff;
+  --color-text-1: #000000ff;
+  --color-text-2: #3c3c4399;
+  --color-text-3: #3c3c434d;
+  --color-text-4: #3c3c432e;
+  --color-text-placeholder: #3c3c434d;
+  --color-seperator: #3c3c434a;
+  --color-seperator-opaque: #c6c6c8ff;
+  --color-texticon-primary: rgba(255, 255, 255, 0.9);
+  --color-texticon-secondary: rgba(255, 255, 255, 0.65);
   --color-status-success: #22c55e;
   --color-status-warning: #fde047;
   --color-status-error: #ef4444;
   --color-status-info: #38bdf8;
   --color-primary-light: #38bdf8;
-  --color-primary-base: #0f1c27;
-  --color-primary-base-10: rgba(15, 28, 39, 0.1);
-  --color-primary-base-5: rgba(15, 28, 39, 0.05);
-  --color-primary-dark: #0284c7;
+  --color-primary-base: #ffffff;
+  --color-primary-base-10: rgba(255, 255, 255, 0.1);
+  --color-primary-base-5: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] {
+  --color-background-1: #000000ff;
+  --color-background-2: #1c1c1eff;
+  --color-background-3: #2c2c2eff;
+  --color-text-1: #ffffffff;
+  --color-text-2: #ebebf599;
+  --color-text-3: #ebebf54d;
+  --color-text-4: #ebebf52e;
+  --color-text-placeholder: #ebebf54d;
+  --color-seperator: #54545899;
+  --color-seperator-opaque: #38383aff;
+  --color-texticon-primary: rgba(255, 255, 255, 0.9);
+  --color-texticon-secondary: rgba(255, 255, 255, 0.65);
+  --color-status-success: #22c55e;
+  --color-status-warning: #fde047;
+  --color-status-error: #ef4444;
+  --color-status-info: #38bdf8;
+  --color-primary-light: #38bdf8;
+  --color-primary-base: #ffffff;
+  --color-primary-base-10: rgba(255, 255, 255, 0.1);
+  --color-primary-base-5: rgba(255, 255, 255, 0.05);
 }
 
 html {
@@ -1257,7 +1286,7 @@ html {
 
 body {
   background-color: var(--color-background-2);
-  color: var(--color-primary-base);
+  color: var(--color-texticon-primary);
   margin: 0 auto;
 }
 
@@ -1653,49 +1682,54 @@ textarea {
 }
 
 .btn-solid {
-  background-color: var(--color-primary-base);
-  border: 2px solid var(--color-primary-base);
-  color: white;
+  background-color: var(--color-text-1);
+  border: 2px solid var(--color-text-1);
+  color: var(--color-background-3);
 }
 
 @media (hover: hover) {
   .btn-solid:hover {
-    background-color: rgba(26, 48, 67, 0.8);
-    border-color: rgba(26, 48, 67, 0.8);
-    -webkit-transition: background-color 0.25s ease-in;
-    transition: background-color 0.25s ease-in;
+    opacity: 0.8;
+    -webkit-transition: opacity 0.25s ease-in;
+    transition: opacity 0.25s ease-in;
   }
 }
 
-.btn-solid-light {
-  color: var(--color-primary-base);
-  background-color: white;
+.btn-solid-reverse {
+  background-color: var(--color-text-1);
+  color: var(--color-background-1);
 }
 
 @media (hover: hover) {
-  .btn-solid-light:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-transition: background-color 0.25s ease-in;
-    transition: background-color 0.25s ease-in;
+  .btn-solid-reverse:hover {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.25s ease-in;
+    transition: opacity 0.25s ease-in;
   }
 }
 
 .btn-outlined {
-  border: 2px solid var(--color-primary-base);
+  background-color: transparent;
+  border: 2px solid var(--color-text-1);
+  color: var(--color-text-1);
 }
 
 @media (hover: hover) {
   .btn-outlined:hover {
-    background-color: var(--color-primary-base);
-    color: white;
+    background-color: var(--color-text-1);
+    color: var(--color-background-3);
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
 }
 
+.btn-ghost {
+  color: var(--color-text-1);
+}
+
 @media (hover: hover) {
   .btn-ghost:hover {
-    background-color: var(--color-primary-base-10);
+    background-color: var(--color-background-2);
     -webkit-transition: background-color 0.25s ease-in;
     transition: background-color 0.25s ease-in;
   }
@@ -1864,7 +1898,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--color-background-3);
+  background-color: var(--color-background-2);
   padding: 1rem;
   height: 100%;
   width: 100%;
@@ -2017,6 +2051,8 @@ textarea {
 }
 
 .input-field {
+  background-color: var(--color-background-2);
+  color: var(--color-text-1);
   display: block;
   margin-bottom: 1rem;
   opacity: 0.9;
