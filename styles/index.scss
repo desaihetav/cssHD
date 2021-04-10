@@ -84,7 +84,7 @@ html {
 
 body {
   background-color: var(--color-background-2);
-  color: var(--color-texticon-primary);
+  color: var(--color-text-1);
   margin: 0 auto;
 }
 
@@ -281,7 +281,7 @@ textarea {
   &-info {
     background-color: rgba(#38bdf8, 0.2);
   }
-  color: var(--color-texticon-secondary);
+  color: var(--color-text-1);
 }
 
 .avatar-badge-stack {
@@ -551,8 +551,8 @@ textarea {
     right: 0;
     font-size: 12px;
     text-transform: uppercase;
-    background-color: var(--color-primary-base);
-    color: white;
+    background-color: var(--color-text-1);
+    color: var(--color-background-3);
     padding: 0.5rem 1.25rem;
 
     &-secondary {

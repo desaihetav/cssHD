@@ -1286,7 +1286,7 @@ html {
 
 body {
   background-color: var(--color-background-2);
-  color: var(--color-texticon-primary);
+  color: var(--color-text-1);
   margin: 0 auto;
 }
 
@@ -1503,7 +1503,7 @@ textarea {
   border-radius: 0.5rem;
   background-color: rgba(15, 28, 39, 0.1);
   text-transform: uppercase;
-  color: var(--color-texticon-secondary);
+  color: var(--color-text-1);
 }
 
 .badge-default {
@@ -1856,8 +1856,8 @@ textarea {
   right: 0;
   font-size: 12px;
   text-transform: uppercase;
-  background-color: var(--color-primary-base);
-  color: white;
+  background-color: var(--color-text-1);
+  color: var(--color-background-3);
   padding: 0.5rem 1.25rem;
 }
 
