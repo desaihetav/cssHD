@@ -127,8 +127,7 @@ textarea {
 }
 
 %secondary-text-color {
-  color: var(--color-primary-base);
-  opacity: 0.7;
+  color: var(--color-text-2);
 }
 
 .rounded-full {
@@ -514,6 +513,7 @@ textarea {
   width: 100%;
   max-height: 20rem;
   height: auto;
+  color: var(--color-text-1);
   @media screen and (max-width: 640px) {
     max-height: 14rem;
   }
@@ -628,7 +628,6 @@ textarea {
     font-size: 1.125rem;
     line-height: 20px;
     font-weight: 600;
-    color: var(--color-primary-base);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
